@@ -42,5 +42,15 @@ export class Bank{
         account.balance -= amount;
         return `Withdrawn ${amount} from ${account.name} account. New balance is ${account.balance}`;
     }
+
+
+    // User Story 4: Check balance of account
+    checkBalance(accountId: string): string{
+        const account = accounts.find(acc => acc.id === accountId);
+        if(!account){
+            return 'Account not found';
+        }
+        return `Balance in ${account.name} account is ${account.balance}`;
+    }
 }
 

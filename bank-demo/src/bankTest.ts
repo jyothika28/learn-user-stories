@@ -33,3 +33,12 @@ console.log(bank.withdraw("10",500));
 //This test case should return 'Insufficient balance' as the balance in Rory account is 500
 console.log(bank.withdraw(roryAccount.id,1000));
 
+
+//User Story 4: Check balance of account
+// Test case: check balance of account
+console.log("**** User Story 4: Check balance of account ****");
+//This test case should return the balance in Rory account which is 500
+console.log(bank.checkBalance(roryAccount.id));
+//This test case should return 'Account not found' as the account with id 10 does not exist
+console.log(bank.checkBalance("10"));
+
