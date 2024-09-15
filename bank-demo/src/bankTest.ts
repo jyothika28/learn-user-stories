@@ -21,3 +21,15 @@ const roryAccount=bank.createAccount("Rory",30) as {id:string};
 console.log(bank.deposit(roryAccount.id,1000));
 //This test case should return 'Account not found' as the account with id 10 does not exist
 console.log(bank.deposit("10",1000));
+
+
+//User Story 3: Withdraw money from account
+// Test case: withdraw money from account
+//This test case should withdraw 500 from Rory account
+console.log("**** User Story 3: Withdraw money from account ****");
+console.log(bank.withdraw(roryAccount.id,500));
+//This test case should return 'Account not found' as the account with id 10 does not exist
+console.log(bank.withdraw("10",500));
+//This test case should return 'Insufficient balance' as the balance in Rory account is 500
+console.log(bank.withdraw(roryAccount.id,1000));
+

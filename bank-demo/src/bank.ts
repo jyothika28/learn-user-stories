@@ -29,4 +29,18 @@ export class Bank{
     account.balance += amount;
     return `Deposited ${amount} into ${account.name} account. New balance is ${account.balance}`;
    }
+
+    // User Story 3: Withdraw money from account
+    withdraw(accountId: string, amount: number): string{
+        const account = accounts.find(acc => acc.id === accountId);
+        if(!account){
+            return 'Account not found';
+        }
+        if(account.balance < amount){
+            return 'Insufficient balance';
+        }
+        account.balance -= amount;
+        return `Withdrawn ${amount} from ${account.name} account. New balance is ${account.balance}`;
+    }
 }
+
