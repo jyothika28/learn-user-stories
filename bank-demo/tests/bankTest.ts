@@ -1,4 +1,4 @@
-import {Bank} from './bank';
+import {Bank} from '../src/bank';
 
 
 //User Story 1: Create account
